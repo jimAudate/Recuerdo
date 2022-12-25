@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RegisterActivity"
+    tools:layout_editor_absoluteX="46dp"
+    tools:layout_editor_absoluteY="161dp">
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tilname"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        app:counterEnabled="true"
+        app:counterMaxLength="10"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:hint="Name"
+            android:textColorHint="#757575" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tiltitulo"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        app:counterEnabled="true"
+        app:counterMaxLength="10"
+        app:layout_constraintEnd_toEndOf="@+id/tilname"
+        app:layout_constraintStart_toStartOf="@+id/tilname"
+        app:layout_constraintTop_toBottomOf="@+id/tilname">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:hint="Titulo" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+
+    <Button
+        android:id="@+id/btnregister"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Register"
+        app:layout_constraintEnd_toEndOf="@+id/edtTiempo"
+        app:layout_constraintTop_toBottomOf="@+id/edtTiempo" />
+
+    <Spinner
+        android:id="@+id/spnQuestions"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:contentDescription="@null"
+        android:minHeight="48dp"
+        app:layout_constraintEnd_toStartOf="@+id/btnregister"
+        app:layout_constraintStart_toStartOf="@+id/edtTiempo"
+        app:layout_constraintTop_toBottomOf="@+id/edtTiempo"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tilpassword"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        app:counterEnabled="true"
+        app:counterMaxLength="10"
+        app:passwordToggleEnabled="true"
+        app:layout_constraintEnd_toEndOf="@+id/tiltitulo"
+        app:layout_constraintStart_toStartOf="@+id/tiltitulo"
+        app:layout_constraintTop_toBottomOf="@+id/tiltitulo">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:hint="Password" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <EditText
+        android:id="@+id/edtTiempo"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:inputType="date"
+        android:focusable="false"
+        android:clickable="true"
+        android:hint="Tiempo"
+        android:maxLines="1"
+        app:layout_constraintEnd_toEndOf="@+id/tilpassword"
+        app:layout_constraintStart_toStartOf="@id/tilpassword"
+        app:layout_constraintTop_toBottomOf="@+id/tilpassword" />
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
